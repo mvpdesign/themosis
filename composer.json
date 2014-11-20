@@ -30,6 +30,12 @@
         "themosis/framework": "1.0.*",
         "themosis/theme": "1.0.*"
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://wpackagist.org"
+        }
+    ],
     "extra":{
         "installer-paths":{
             "public/wp-content/plugins/themosis-{$name}/": ["themosis/framework"],
