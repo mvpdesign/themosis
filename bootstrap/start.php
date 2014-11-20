@@ -3,7 +3,7 @@
 // Paths
 /*----------------------------------------------------*/
 $root_path = dirname(__DIR__);
-$webroot_path = $root_path.DS.'htdocs';
+$webroot_path = $root_path.DS.'public';
 
 /*----------------------------------------------------*/
 // Include composer autoloading
@@ -75,7 +75,7 @@ if (file_exists($config = $root_path.DS.'config'.DS.'environments'.DS.$location.
 /*----------------------------------------------------*/
 // Content directory
 /*----------------------------------------------------*/
-define('CONTENT_DIR', 'content');
+define('CONTENT_DIR', 'wp-content');
 define('WP_CONTENT_DIR', $webroot_path.DS.CONTENT_DIR);
 define('WP_CONTENT_URL', WP_HOME.'/'.CONTENT_DIR);
 
@@ -92,5 +92,5 @@ if (file_exists($shared = $root_path.DS.'config'.DS.'shared.php'))
 /*----------------------------------------------------*/
 if (!defined('ABSPATH'))
 {
-	define('ABSPATH', $webroot_path.DS.'cms'.DS);
+	define('ABSPATH', $webroot_path.DS.'wp'.DS);
 }

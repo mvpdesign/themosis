@@ -10,6 +10,6 @@ return array(
     'DB_PASSWORD'   => 'database_password',
     'DB_HOST'       => 'localhost',
     'WP_HOME'       => 'http://example.com',
-    'WP_SITEURL'    => 'http://example.com/cms'
+    'WP_SITEURL'    => 'http://example.com/wp'
 
 );
