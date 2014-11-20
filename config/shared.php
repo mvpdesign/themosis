@@ -38,7 +38,7 @@ define('NONCE_SALT',       'put your unique phrase here');
 /*----------------------------------------------------*/
 // Custom settings
 /*----------------------------------------------------*/
-define('WP_AUTO_UPDATE_CORE', 'minor');
+define('AUTOMATIC_UPDATER_DISABLED', true);
 define('DISALLOW_FILE_EDIT', true);
 
 /* That's all, stop editing! Happy blogging. */
