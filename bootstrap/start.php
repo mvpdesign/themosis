@@ -77,7 +77,7 @@ if (file_exists($config = $root_path.DS.'config'.DS.'environments'.DS.$location.
 /*----------------------------------------------------*/
 define('CONTENT_DIR', 'wp-content');
 define('WP_CONTENT_DIR', $webroot_path.DS.CONTENT_DIR);
-define('WP_CONTENT_URL', WP_HOME.'/'.CONTENT_DIR);
+define('WP_CONTENT_URL', WP_HOME.DS.CONTENT_DIR);
 
 /*----------------------------------------------------*/
 // Include shared configuration
