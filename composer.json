@@ -1,14 +1,19 @@
 {
-	"name": "themosis/themosis",
+	"name": "mvpdesign/themosis",
 	"description": "The Themosis framework. A framework for WordPress developers.",
 	"keywords": ["themosis", "framework", "WordPress"],
 	"license": "GPL-2.0+",
 	"authors": [
-		{
-			"name": "Julien Lambé",
-			"email": "julien@themosis.com",
-			"homepage": "http://www.themosis.com/"
-		}
+        {
+            "name": "Julien Lambé",
+            "email": "julien@themosis.com",
+            "homepage": "http://www.themosis.com/"
+        },
+        {
+            "name": "Brock Riemenschneider",
+            "email": "brock@mvpdesign.com",
+            "homepage": "https://github.com/BsWiM"
+        }
 	],
 	"type": "project",
 	"autoload": {
