@@ -21,6 +21,7 @@ public/wp-content/blogs.dir/
 public/wp-content/cache/
 public/wp-content/mu-plugins/*
 !public/wp-content/mu-plugins/index.php
+!public/wp-content/mu-plugins/start.php
 public/wp-content/plugins/*
 !public/wp-content/plugins/index.php
 public/wp-content/upgrade/

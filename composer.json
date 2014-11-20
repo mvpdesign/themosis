@@ -38,7 +38,7 @@
     ],
     "extra":{
         "installer-paths":{
-            "public/wp-content/plugins/themosis-{$name}/": ["themosis/framework"],
+            "public/wp-content/mu-plugins/themosis-{$name}/": ["themosis/framework"],
 			"public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
             "public/wp-content/themes/themosis-{$name}/": ["themosis/theme"],
             "public/wp-content/themes/{$name}/": ["type:wordpress-theme"]
