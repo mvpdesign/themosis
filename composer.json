@@ -28,20 +28,23 @@
         "php": ">=5.4",
         "johnpbloch/wordpress": ">=4.0",
         "themosis/framework": "1.0.*",
-        "themosis/theme": "1.0.*"
+        "mvpdesign/themosis-theme": "1.0.*"
     },
     "repositories": [
         {
             "type": "composer",
             "url": "http://wpackagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/mvpdesign/themosis-theme"
         }
     ],
     "extra":{
         "installer-paths":{
             "public/wp-content/mu-plugins/themosis-{$name}/": ["themosis/framework"],
             "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-            "public/wp-content/themes/themosis-{$name}/": ["themosis/theme"],
-            "public/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+            "public/wp-content/themes/{$name}/": ["type:wordpress-theme", "mvpdesign/themosis-theme"]
         },
         "wordpress-install-dir": "public/wp"
     }
