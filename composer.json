@@ -28,7 +28,8 @@
         "php": ">=5.4",
         "johnpbloch/wordpress": ">=4.0",
         "themosis/framework": "1.0.*",
-        "mvpdesign/themosis-theme": "1.0.*"
+        "mvpdesign/themosis-theme": "1.0.*",
+        "mvpdesign/themosis-installer": "1.0.*"
     },
     "repositories": [
         {
@@ -38,8 +39,15 @@
         {
             "type": "vcs",
             "url": "https://github.com/mvpdesign/themosis-theme"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/mvpdesign/themosis-installer"
         }
     ],
+    "scripts": {
+        "post-create-project-cmd": ["MVPDesign\\ThemosisInstaller\\Hooks::themosis"]
+    },
     "extra":{
         "installer-paths":{
             "public/wp-content/mu-plugins/themosis-{$name}/": ["themosis/framework"],
