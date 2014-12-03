@@ -5,8 +5,8 @@
 /*----------------------------------------------------*/
 return array(
 
-    'local'             => 'your machine hostname',
-    'staging'           => 'remote machine hostname',
-    'production'        => 'remote machine hostname'
+    'local' => 'machine hostname',
+    'staging' => 'machine hostname',
+    'production' => 'machine hostname'
 
 );
