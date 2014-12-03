@@ -29,7 +29,7 @@
         "johnpbloch/wordpress": ">=4.0",
         "themosis/framework": "1.0.*",
         "mvpdesign/themosis-theme": "1.0.*",
-        "mvpdesign/themosis-installer": "1.2.*"
+        "mvpdesign/themosis-installer": "1.3.*"
     },
     "repositories": [
         {
