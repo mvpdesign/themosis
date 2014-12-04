@@ -49,9 +49,11 @@ class Environment
         // by comparing the hostname.
         $hostname = gethostname();
 
-        foreach ($this->locations as $location => $name) {
-            if ($hostname === $name) {
-                return $location;
+        foreach ($this->locations as $location => $hosts) {
+            foreach ((array) $hosts as $host) {
+                if ($hostname === $host) {
+                    return $location;
+                }
             }
         }
 
