@@ -54,7 +54,7 @@
     },
     "extra":{
         "installer-paths":{
-            "public/wp-content/mu-plugins/themosis-{$name}/": ["themosis/framework"],
+            "public/wp-content/mu-plugins/{$name}/": ["mvpdesign/themosis-framework"],
             "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
             "public/wp-content/themes/themosis": ["mvpdesign/themosis-theme"],
             "public/wp-content/themes/{$name}/": ["type:wordpress-theme"]
