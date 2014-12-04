@@ -23,6 +23,10 @@
         },
         {
             "type": "vcs",
+            "url": "https://github.com/mvpdesign/themosis-framework"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/mvpdesign/themosis-theme"
         },
         {
@@ -41,7 +45,7 @@
     "require": {
         "php": ">=5.4",
         "johnpbloch/wordpress": ">=4.0.1",
-        "themosis/framework": "dev-master",
+        "mvpdesign/themosis-framework": "dev-master",
         "mvpdesign/themosis-theme": "dev-master",
         "mvpdesign/themosis-installer": "1.3.*"
     },
