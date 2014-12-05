@@ -39,11 +39,13 @@ $env = new Thms\Config\Environment($root_path.DS, $environments);
 /*----------------------------------------------------*/
 // Load .env file
 /*----------------------------------------------------*/
-$location = $env->which();
+define('ENVIRONMENT', $env->which());
 
-if (empty($location)) printf('<h1>%s</h1>', 'Unable to define the environment.');
+if (! defined('ENVIRONMENT') || ! ENVIRONMENT) {
+    printf('<h1>%s</h1>', 'Unable to define the environment.');
+}
 
-$loaded = $env->load($location);
+$loaded = $env->load(ENVIRONMENT);
 
 if (empty($loaded)) printf('<h1>%s</h1>', 'Unable to locate your environment configuration file.');
 
@@ -67,9 +69,8 @@ else
 /*----------------------------------------------------*/
 // Load environment config constants
 /*----------------------------------------------------*/
-if (file_exists($config = $root_path.DS.'config'.DS.'environments'.DS.$location.'.php'))
-{
-	require_once($config);
+if (file_exists($config = $root_path.DS.'config'.DS.'environments'.DS.ENVIRONMENT.'.php')) {
+    require_once($config);
 }
 
 /*----------------------------------------------------*/
