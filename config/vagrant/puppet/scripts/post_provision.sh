@@ -4,4 +4,4 @@ mysql -uroot < "/vagrant/config/vagrant/puppet/scripts/enable_remote_mysql_acces
 sed -i "s/^bind-address/#bind-address/" /etc/mysql/my.cnf
 sudo service mysql restart
 
-composer run-script magic
+# cd /vagrant && composer run-script pre-archive-cmd
