@@ -50,8 +50,10 @@
         "mvpdesign/themosis-installer": "1.3.*"
     },
     "scripts": {
-        "pre-install-cmd": "vagrant up",
-        "post-create-project-cmd" : "MVPDesign\\WordpressInstaller\\Magic::happens"
+        "post-create-project-cmd" : [
+            "vagrant up",
+            "MVPDesign\\WordpressInstaller\\Magic::happens"
+        ]
     },
     "extra":{
         "installer-paths":{
