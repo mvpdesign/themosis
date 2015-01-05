@@ -28,6 +28,7 @@ public/wp-content/upgrade/
 public/wp-content/uploads/
 !public/wp-content/uploads/index.php
 public/wp-content/wp-cache-config.php
+public/wp-content/themes/themosis/
 
 ### Environment Credentials
 .env.*.php
