@@ -32,4 +32,3 @@ public/wp-content/themes/themosis/
 
 ### Environment Credentials
 .env.*.php
-!.env.local.php
