@@ -51,7 +51,7 @@
     },
     "scripts": {
         "pre-create-project-cmd" : "vagrant up",
-        "post-create-project-cmd" : ["MVPDesign\\WordpressInstaller\\Magic::happens"]
+        "post-create-project-cmd" : "MVPDesign\\WordpressInstaller\\Magic::happens"
     },
     "extra":{
         "installer-paths":{
