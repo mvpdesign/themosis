@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-vagrant_dir = File.expand_path(File.dirname(__FILE__))
+# vagrant_dir = File.expand_path(File.dirname(__FILE__))
 
 Vagrant.configure("2") do |config|
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -41,8 +41,8 @@ Vagrant.configure("2") do |config|
     # If the vagrant plugin hostsupdater is installed this will manage stuff
 
     if defined? VagrantPlugins::HostsUpdater
-      config.hostsupdater.aliases = ["#{config.vm.hostname}.dev"]
-      config.hostsupdater.remove_on_suspend = true
+        config.hostsupdater.aliases = ["#{config.vm.hostname}.dev"]
+        config.hostsupdater.remove_on_suspend = true
     end
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -52,9 +52,11 @@ Vagrant.configure("2") do |config|
     # Provider-specific configuration so you can fine-tune various
     # backing providers for Vagrant. These expose provider-specific options.
     config.vm.provider :virtualbox do |vb|
-      vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-      vb.customize ["modifyvm", :id, "--memory", "1024"]
+        vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+        vb.customize ["modifyvm", :id, "--memory", "1024"]
     end
+
+    config.vm.synced_folder ".", "/home/vagrant/", :mount_options => [ "dmode=775", "fmode=775" ]
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -62,23 +64,27 @@ Vagrant.configure("2") do |config|
     #
     # Initiate the different types of provisioning including puppet
 
+    # Add github to the list of known_hosts
+    config.vm.provision :shell do |shell|
+        shell.inline = "mkdir $1 && touch $2 && ssh-keyscan -H $3 >> $2 && chmod 600 $2"
+        shell.args = %q{/root/.ssh /root/.ssh/known_hosts "github.com"}
+    end
+
     # Provision
     config.vm.provision :shell, :path => "config/vagrant/provision/provision.sh"
 
     # Puppet
     config.vm.provision :puppet do |puppet|
-      puppet.manifests_path = 'config/vagrant/puppet/manifests'
-      puppet.module_path    = 'config/vagrant/puppet/modules'
-      puppet.manifest_file  = 'init.pp'
-      puppet.options        = '--verbose --debug'
+        puppet.manifests_path = 'config/vagrant/puppet/manifests'
+        puppet.module_path    = 'config/vagrant/puppet/modules'
+        puppet.manifest_file  = 'init.pp'
+        puppet.options        = '--verbose --debug'
     end
 
     # Post Provision
     config.vm.provision :shell, :path => "config/vagrant/provision/post-provision.sh"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-
 
     # Sync folders
     #
