@@ -47,7 +47,7 @@
         "johnpbloch/wordpress": ">=4.1",
         "mvpdesign/themosis-framework": "dev-master",
         "mvpdesign/themosis-theme": "dev-master",
-        "mvpdesign/themosis-installer": "1.4.*"
+        "mvpdesign/themosis-installer": "1.5.*"
     },
     "scripts": {
         "post-create-project-cmd": ["MVPDesign\\ThemosisInstaller\\Hooks::themosis"]
