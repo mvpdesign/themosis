@@ -44,10 +44,11 @@
     },
     "require": {
         "php": ">=5.4",
+        "wp-cli/wp-cli": "0.17.*",
         "johnpbloch/wordpress": ">=4.1",
         "mvpdesign/themosis-framework": "dev-master",
         "mvpdesign/themosis-theme": "dev-master",
-        "mvpdesign/themosis-installer": "1.3.*"
+        "mvpdesign/themosis-installer": "1.5.*"
     },
     "scripts": {
         "pre-create-project-cmd" : "vagrant up"
