@@ -44,6 +44,7 @@
     },
     "require": {
         "php": ">=5.4",
+        "wp-cli/wp-cli": "0.17.*",
         "johnpbloch/wordpress": ">=4.1",
         "mvpdesign/themosis-framework": "dev-master",
         "mvpdesign/themosis-theme": "dev-master",
