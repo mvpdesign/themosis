@@ -45,7 +45,7 @@
     "require": {
         "php": ">=5.4",
         "wp-cli/wp-cli": "0.19.*",
-        "johnpbloch/wordpress": ">=4.1",
+        "johnpbloch/wordpress": ">=4.2",
         "mvpdesign/themosis-framework": "dev-master",
         "mvpdesign/themosis-theme": "dev-master",
         "mvpdesign/themosis-installer": "1.6.*"
